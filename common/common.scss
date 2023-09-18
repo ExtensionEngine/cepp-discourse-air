@@ -1,12 +1,7 @@
-$secondary-font:'Lora', Georgia, 'Times New Roman', Times, serif;
 $cepp-white: #fff;
-$cepp-bg-color: #f7f9fb;
 $cepp-green: #48a441;
-$cepp-green-lightest: rgba(72, 164, 65, 0.2);
-$cepp-blue-darker: #062d3a;
 $cepp-blue: #343f79;
 $cepp-orange: #de5a3a;
-$cepp-yellow: #efbf00;
 $cepp-black: #151515;
 $cepp-grey-darker: #4d4d4d;
 $cepp-grey-dark: #696969;
@@ -14,8 +9,30 @@ $cepp-grey: #737373;
 $cepp-grey-light: #888;
 $cepp-grey-lighter: #dee0e9;
 $cepp-grey-lightest: #f5f7f9;
-$cepp-box-shadow: 0 2px 4px 0 rgba(159,159,159,0.25);
-$cepp-border-radius: 8px;
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  src: url($ProximaNovaRegular);
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  src: url($ProximaNovaSemibold);
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  src: url($ProximaNovaBold);
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 900;
+  src: url($ProximaNovaExtrabold);
+}
 
 // custom search banner customizations
 .custom-search-banner-wrap {
@@ -220,11 +237,16 @@ div.ac-wrap {
         background-color: $cepp-grey-lightest;
       }
 
+      .custom-header-links {
+        border: 27px solid $cepp-grey-lightest;
+        background: $cepp-grey-lightest;
+      }
+
       .custom-header-links a {
-        font-family: Montserrat;
         font-weight: bold;
         font-size: 0.8125rem;
         transition: all 0.3s;
+        white-space: nowrap;
 
         &:hover {
           color: $cepp-green;
@@ -321,7 +343,7 @@ html {
       ),
       linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
 
-    font-family: Open Sans;
+    font-family: 'Proxima Nova';
   }
   .background-container {
     position: fixed;
@@ -623,4 +645,90 @@ html body #main-outlet {
 
 .sidebar-wrapper {
   border-radius: 0 !important;
+}
+
+.footer {
+  display: flex;
+  height: 100%;
+  margin: auto;
+  padding: 30px 74px 100px 74px;
+  justify-content: space-between;
+  color: $cepp-grey-darker;
+  background-color: $cepp-grey-lightest;
+
+  a {
+    color: $cepp-orange;
+  }
+
+  .highlight-link {
+    font-weight: 700;
+  }
+
+  &-left {
+    width: 100%;
+    max-width: 440px;
+    padding-top: 55px;
+    font-size: 16px;
+    line-height: 24px;
+
+    .links {
+      margin-top: 20px;
+
+      a {
+        transition: color 0.3s;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: $cepp-grey-darker;
+
+        &:hover {
+          color: $cepp-green;
+        }
+      }
+
+      .divider {
+        border-color: #000;
+        height: 15px;
+        margin: 2px;
+        min-height: 0;
+        max-height: calc(100% - 16px);
+        align-self: stretch;
+        border: solid;
+        border-width: 0 thin 0 0;
+        display: inline-flex;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+
+  &-right {
+    width: 100%;
+    max-width: 310px;
+    text-align: right;
+
+    .contact-us {
+      display: flex;
+      margin-bottom: 30px;
+      color: $cepp-black;
+      font-size: 16px;
+      font-weight: 600;
+      align-items: center;
+      justify-content: flex-end;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $cepp-green;
+      }
+
+      svg {
+        width: 1.7em;
+        height: 1.7em;
+        margin-left: 15px;
+      }
+    }
+
+    .terms-and-conditions {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
 }
