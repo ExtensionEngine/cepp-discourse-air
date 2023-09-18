@@ -47,6 +47,7 @@ $cepp-grey-lightest: #f5f7f9;
   p {
     font-size: 1.125rem !important;
     font-weight: 700;
+    font-family: 'Open Sans';
     margin-bottom: 1em;
   }
   .btn {
@@ -231,6 +232,10 @@ div.ac-wrap {
         display: none;
       }
 
+      #site-logo {
+        height: 30px;
+      }
+
       .panel {
         padding-right: 10px;
         height: 100%;
@@ -343,7 +348,7 @@ html {
       ),
       linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
 
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova', 'Open Sans';
   }
   .background-container {
     position: fixed;
