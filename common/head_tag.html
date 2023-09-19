@@ -1,0 +1,46 @@
+<script type="text/javascript">
+  const bannerContainerSelector = ".below-site-header-outlet.search-banner.ember-view";
+  const show = elem => elem.style.display = "block";
+  const hide = elem => elem.style.display = "none";
+
+  const toggle = (elem, value) => {
+    if (value) {
+      show(elem);
+      return;
+    }
+    hide(elem);
+  };
+
+  const toggleDisplay = function() {
+    const container = document.querySelector(bannerContainerSelector);
+    const containerWithoutSearch = document.querySelector(".without-search");
+    const isSearchPage = document.body.classList.contains("search-page");
+
+    toggle(container, !isSearchPage);
+    toggle(containerWithoutSearch, isSearchPage);
+  };
+
+  let observer = new MutationObserver(mutations => {
+    toggleDisplay();
+  });
+
+
+  window.onload = function(e) {
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+    const container = document.querySelector(bannerContainerSelector);
+    const html = `
+        <div class="custom-search-banner without-search" style="display: none;">
+        <div class="wrap custom-search-banner-wrap">
+          <h1>APPR Community</h1>
+          <p>Connect - Ask Questions - Share Experiences</p>
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML("afterend", html);
+    toggleDisplay();
+  };
+
+</script>
