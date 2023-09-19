@@ -334,19 +334,19 @@ div.ac-wrap {
 // graceful ish style
 @mixin box-shadow($value: 0px) {
   box-shadow: 0 24px 40px rgba(0, 0, 0, 0.07),
-    0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
-    0 4.50776px 10.0172px rgba(0, 0, 0, 0.035),
-    0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
+  0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
+  0 4.50776px 10.0172px rgba(0, 0, 0, 0.035),
+  0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
 }
 
 html {
   body {
     background: linear-gradient(
-        0deg,
-        rgba(var(--primary-rgb), 0.075) 0%,
-        rgba(var(--primary-rgb), 0.075) 100%
-      ),
-      linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
+                    0deg,
+                    rgba(var(--primary-rgb), 0.075) 0%,
+                    rgba(var(--primary-rgb), 0.075) 100%
+    ),
+    linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
 
     font-family: 'Proxima Nova', 'Open Sans';
   }
@@ -594,9 +594,9 @@ html body #main-outlet {
   border-radius: 1em;
   padding: 3em 3em 5%;
   box-shadow: 0 24px 40px rgba(0, 0, 0, 0.07),
-    0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
-    0 4.50776px 10.0172px rgba(0, 0, 0, 0.035),
-    0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
+  0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
+  0 4.50776px 10.0172px rgba(0, 0, 0, 0.035),
+  0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
   z-index: 1;
   position: relative;
 }
@@ -607,9 +607,9 @@ html body #main-outlet {
   }
   &::before {
     background: linear-gradient(
-      90deg,
-      var(--tertiary-hover) 0%,
-      var(--tertiary) 100%
+                    90deg,
+                    var(--tertiary-hover) 0%,
+                    var(--tertiary) 100%
     );
     clip-path: ellipse(148% 70% at 91% -14%);
     content: "";
@@ -734,6 +734,32 @@ html body #main-outlet {
     .terms-and-conditions {
       font-size: 12px;
       line-height: 18px;
+    }
+  }
+}
+
+.search-container {
+  .search-header {
+    .search-cta {
+      background: $cepp-blue;
+    }
+    .search-filters {
+      .advanced-filters > summary {
+        color: $cepp-orange;
+
+        &::before {
+          color: $cepp-black;
+        }
+      }
+
+    }
+  }
+  .search-advanced {
+    .search-results {
+      .topic-title {
+        color: $cepp-orange;
+        text-decoration: underline;
+      }
     }
   }
 }
