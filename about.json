@@ -10,6 +10,12 @@
   "modifiers": {
     "serialize_topic_excerpts": true
   },
+  "assets": {
+    "ProximaNovaBold": "assets/ProximaNovaBold.otf",
+    "ProximaNovaExtrabold": "assets/ProximaNovaExtrabold.otf",
+    "ProximaNovaRegular": "assets/ProximaNovaRegular.otf",
+    "ProximaNovaSemibold": "assets/ProximaNovaSemibold.otf"
+  },
   "color_schemes": {
     "air-light": {
       "primary": "1c1c1c",
