@@ -9,8 +9,8 @@
     const bannerWithoutSearch = document.querySelector(".without-search");
     const isSearchPage = document.body.classList.contains("search-page");
 
-    toggle(container, !isSearchPage);
-    toggle(bannerWithoutSearch, isSearchPage);
+    if (container) toggle(container, !isSearchPage);
+    if (bannerWithoutSearch) toggle(bannerWithoutSearch, isSearchPage);
   };
 
   const observer = new MutationObserver(mutations => {
@@ -19,6 +19,7 @@
 
   const insertBanner = () => {
     const container = document.querySelector(bannerContainerSelector);
+    if (!container) return;
     const html = `
       <div class="custom-search-banner without-search" style="display: none;">
         <div class="wrap custom-search-banner-wrap">
