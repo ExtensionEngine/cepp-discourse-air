@@ -2,37 +2,25 @@
   const bannerContainerSelector = ".below-site-header-outlet.search-banner.ember-view";
   const show = elem => elem.style.display = "block";
   const hide = elem => elem.style.display = "none";
+  const toggle = (elem, value) => value ? show(elem) : hide(elem);
 
-  const toggle = (elem, value) => {
-    if (value) {
-      show(elem);
-      return;
-    }
-    hide(elem);
-  };
-
-  const toggleDisplay = function() {
+  const toggleDisplay = () => {
     const container = document.querySelector(bannerContainerSelector);
-    const containerWithoutSearch = document.querySelector(".without-search");
+    const bannerWithoutSearch = document.querySelector(".without-search");
     const isSearchPage = document.body.classList.contains("search-page");
 
     toggle(container, !isSearchPage);
-    toggle(containerWithoutSearch, isSearchPage);
+    toggle(bannerWithoutSearch, isSearchPage);
   };
 
-  let observer = new MutationObserver(mutations => {
+  const observer = new MutationObserver(mutations => {
     toggleDisplay();
   });
 
-
-  window.onload = function(e) {
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ["class"]
-    });
+  const insertBanner = () => {
     const container = document.querySelector(bannerContainerSelector);
     const html = `
-        <div class="custom-search-banner without-search" style="display: none;">
+      <div class="custom-search-banner without-search" style="display: none;">
         <div class="wrap custom-search-banner-wrap">
           <h1>APPR Community</h1>
           <p>Connect - Ask Questions - Share Experiences</p>
@@ -40,6 +28,14 @@
       </div>
     `;
     container.insertAdjacentHTML("afterend", html);
+  }
+
+  window.onload = () => {
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+    insertBanner();
     toggleDisplay();
   };
 
