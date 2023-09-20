@@ -342,9 +342,9 @@ div.ac-wrap {
 html {
   body {
     background: linear-gradient(
-                    0deg,
-                    rgba(var(--primary-rgb), 0.075) 0%,
-                    rgba(var(--primary-rgb), 0.075) 100%
+      0deg,
+      rgba(var(--primary-rgb), 0.075) 0%,
+      rgba(var(--primary-rgb), 0.075) 100%
     ),
     linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
 
@@ -607,9 +607,9 @@ html body #main-outlet {
   }
   &::before {
     background: linear-gradient(
-                    90deg,
-                    var(--tertiary-hover) 0%,
-                    var(--tertiary) 100%
+      90deg,
+      var(--tertiary-hover) 0%,
+      var(--tertiary) 100%
     );
     clip-path: ellipse(148% 70% at 91% -14%);
     content: "";
