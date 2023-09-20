@@ -1,5 +1,5 @@
 {
-  "name": "Air Theme",
+  "name": "CEPP Air Theme",
   "about_url": null,
   "license_url": null,
   "components": [
@@ -9,6 +9,12 @@
   ],
   "modifiers": {
     "serialize_topic_excerpts": true
+  },
+  "assets": {
+    "ProximaNovaBold": "assets/ProximaNovaBold.otf",
+    "ProximaNovaExtrabold": "assets/ProximaNovaExtrabold.otf",
+    "ProximaNovaRegular": "assets/ProximaNovaRegular.otf",
+    "ProximaNovaSemibold": "assets/ProximaNovaSemibold.otf"
   },
   "color_schemes": {
     "air-light": {
