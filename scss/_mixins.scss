@@ -1,0 +1,5 @@
+@mixin default-focus() {
+  border-color: $cepp-blue;
+  outline: 1px solid $cepp-blue;
+  outline-offset: 0;
+}
