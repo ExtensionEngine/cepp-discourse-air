@@ -84,21 +84,21 @@
       @include default-focus;
     }
   }
-}
 
-.select-kit.single-select {
-  &.is-expanded .select-kit-header:not(.btn),
-  .select-kit-header:not(.btn):focus,
-  .select-kit-header:not(.btn):active {
-    @include default-focus;
-  }
+  &.single-select {
+    &.is-expanded .select-kit-header:not(.btn),
+    .select-kit-header:not(.btn):focus,
+    .select-kit-header:not(.btn):active {
+      @include default-focus;
+    }
 
-  .select-kit-header {
-    border-radius: 0;
-  }
+    .select-kit-header {
+      border-radius: 0;
 
-  .select-kit-header:focus {
-    @include default-focus;
+      &:focus {
+        @include default-focus;
+      }
+    }
   }
 }
 
