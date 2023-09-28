@@ -1,0 +1,85 @@
+.footer {
+  display: flex;
+  height: 100%;
+  margin: auto;
+  padding: 30px 74px 100px 74px;
+  justify-content: space-between;
+  color: $cepp-grey-darker;
+  background-color: $cepp-grey-lightest;
+
+  a {
+    color: $cepp-orange;
+  }
+
+  .highlight-link {
+    font-weight: 700;
+  }
+
+  &-left {
+    width: 100%;
+    max-width: 440px;
+    padding-top: 55px;
+    font-size: 16px;
+    line-height: 24px;
+
+    .links {
+      margin-top: 20px;
+
+      a {
+        transition: color 0.3s;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: $cepp-grey-darker;
+
+        &:hover {
+          color: $cepp-green;
+        }
+      }
+
+      .divider {
+        border-color: #000;
+        height: 15px;
+        margin: 2px;
+        min-height: 0;
+        max-height: calc(100% - 16px);
+        align-self: stretch;
+        border: solid;
+        border-width: 0 thin 0 0;
+        display: inline-flex;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+
+  &-right {
+    width: 100%;
+    max-width: 310px;
+    text-align: right;
+
+    .contact-us {
+      display: flex;
+      margin-bottom: 30px;
+      color: $cepp-black;
+      font-size: 16px;
+      font-weight: 600;
+      align-items: center;
+      justify-content: flex-end;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $cepp-green;
+      }
+
+      svg {
+        width: 1.7em;
+        height: 1.7em;
+        margin-left: 15px;
+      }
+    }
+
+    .terms-and-conditions {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
