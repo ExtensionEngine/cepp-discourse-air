@@ -4,7 +4,7 @@
   const hide = elem => elem.style.display = "none";
   const toggle = (elem, value) => value ? show(elem) : hide(elem);
 
-  const toggleDisplay = () => {
+  const toggleBanner = () => {
     const container = document.querySelector(bannerContainerSelector);
     const bannerWithoutSearch = document.querySelector(".without-search");
     const isSearchPage = document.body.classList.contains("search-page");
@@ -13,8 +13,16 @@
     if (bannerWithoutSearch) toggle(bannerWithoutSearch, isSearchPage);
   };
 
+  const toggleWelcomeMessage = () => {
+    const welcomeMessage = document.querySelector(".welcome-message");
+    const isLandingPage = document.body.classList.contains("navigation-topics");
+
+    if (welcomeMessage) toggle(welcomeMessage, isLandingPage);
+  };
+
   const observer = new MutationObserver(mutations => {
-    toggleDisplay();
+    toggleBanner();
+    toggleWelcomeMessage();
   });
 
   const insertBanner = () => {
@@ -29,6 +37,38 @@
       </div>
     `;
     container.insertAdjacentHTML("afterend", html);
+  };
+
+  const insertWelcomeMessage = () => {
+    const globalNotice = document.querySelector(".global-notice");
+    if (!globalNotice) return;
+    globalNotice.innerHTML = `
+      <div class="row welcome-message" style="display: none;">
+        <div class="alert alert-info">
+          <span class="text">Welcome to our community. We're happy to have you here. If you need help, please search before you post.</span>
+        </div>
+      </div>
+    ` + globalNotice.innerHTML;
+  };
+
+  function profileBtnClick(event) {
+    const element = event.target;
+    const userMenuButtonProfile = element.closest("#user-menu-button-profile");
+    if (!userMenuButtonProfile) return;
+
+    const logout = document.querySelector("#quick-access-profile .logout");
+    const accountSettings = `
+        <li class="preferences">
+          <a href="https://profile.advancingpretrial.org?source=community&amp;redirectTo=https%3A%2F%2Fcommunity.advancingpretrial.org%2F">
+          <svg class="fa d-icon d-icon-user-cog svg-icon svg-string" xmlns="http://www.w3.org/2000/svg"><use href="#user-cog"></use></svg>
+          <span class="item-label">
+            Account Settings
+          </span>
+          </a>
+        </li>
+        `;
+
+    logout.insertAdjacentHTML("beforebegin", accountSettings);
   }
 
   window.onload = () => {
@@ -37,7 +77,12 @@
       attributeFilter: ["class"]
     });
     insertBanner();
-    toggleDisplay();
+    toggleBanner();
+
+    insertWelcomeMessage();
+    toggleWelcomeMessage();
+
+    document.addEventListener("click", profileBtnClick);
   };
 
 </script>
