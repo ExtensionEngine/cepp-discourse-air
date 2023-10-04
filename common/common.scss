@@ -132,3 +132,72 @@ input {
     }
   }
 }
+
+.category-breadcrumb {
+  display: none;
+}
+
+@mixin primary-button() {
+  background-color: $cepp-green;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: $cepp-white;
+  padding: 10px 20px;
+  border: 2px solid $cepp-green;
+  font-weight: 300;
+
+  svg {
+    color: $cepp-white;
+  }
+
+  &:hover {
+    background-color: $cepp-white;
+    color: $cepp-green;
+
+    svg {
+      color: $cepp-green;
+    }
+  }
+}
+
+#create-topic {
+  @include primary-button;
+}
+
+#topic-footer-buttons {
+  .create {
+    @include primary-button;
+  }
+}
+
+#sidebar-section-content-quick-links {
+  .sidebar-section-link {
+    &-prefix {
+      display: none;
+    }
+
+    &-content-text {
+      padding: 5px 20px;
+      color: $cepp-orange;
+      font-weight: 600;
+      line-height: 18px;
+    }
+  }
+}
+
+.topic-map, .timeline-scrollarea-wrapper {
+  display: none;
+}
+
+.topic-body {
+  a {
+    color: $cepp-orange;
+    text-decoration: underline;
+  }
+
+  .full-name {
+    a {
+      text-decoration: none;
+    }
+  }
+}
