@@ -137,29 +137,6 @@ input {
   display: none;
 }
 
-@mixin primary-button() {
-  background-color: $cepp-green;
-  border-radius: 20px;
-  text-transform: uppercase;
-  color: $cepp-white;
-  padding: 10px 20px;
-  border: 2px solid $cepp-green;
-  font-weight: 300;
-
-  svg {
-    color: $cepp-white;
-  }
-
-  &:hover {
-    background-color: $cepp-white;
-    color: $cepp-green;
-
-    svg {
-      color: $cepp-green;
-    }
-  }
-}
-
 #create-topic {
   @include primary-button;
 }
