@@ -197,3 +197,11 @@ input {
     border-radius: 0;
   }
 }
+
+#quick-access-profile li span {
+  text-transform: uppercase;
+}
+
+#quick-access-replies a {
+  color: $cepp-orange;
+}

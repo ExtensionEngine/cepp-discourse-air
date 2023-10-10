@@ -199,7 +199,6 @@ div.ac-wrap {
 .d-header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   height: 75px;
-  text-transform: uppercase;
   background: $cepp-white;
 
   .wrap {
@@ -237,6 +236,7 @@ div.ac-wrap {
             font-size: 13px;
             transition: all 0.3s;
             white-space: nowrap;
+            text-transform: uppercase;
 
             &:hover {
               color: $cepp-green;
