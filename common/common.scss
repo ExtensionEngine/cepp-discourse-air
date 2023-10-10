@@ -54,7 +54,7 @@
     }
   }
 
-  & > div, .search-header > div, .search-advanced-filters {
+  .search-header, .search-bar, .search-filters, .search-advanced-filters {
     background: #E8E8E8 !important;
   }
 
@@ -195,5 +195,11 @@ input {
 
   .btn-primary:hover {
     background: #1955bd;
+  }
+}
+
+#reply-control, #bookmark-reminder-modal {
+  input, .select-kit-header, .d-editor-textarea-wrapper {
+    border-radius: 0;
   }
 }
