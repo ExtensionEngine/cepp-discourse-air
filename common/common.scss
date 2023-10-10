@@ -53,6 +53,14 @@
       }
     }
   }
+
+  & > div, .search-header > div, .search-advanced-filters {
+    background: #E8E8E8 !important;
+  }
+
+  .search-page-heading span.term {
+    background: #D7D7D7;
+  }
 }
 
 #reply-control {
