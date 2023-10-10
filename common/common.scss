@@ -78,8 +78,6 @@
 }
 
 .d-editor-textarea-wrapper {
-  border-radius: 0;
-
   &.in-focus {
     @include default-focus;
   }
@@ -101,8 +99,6 @@
     }
 
     .select-kit-header {
-      border-radius: 0;
-
       &:focus {
         @include default-focus;
       }
@@ -125,8 +121,6 @@ input {
   &[type="search"],
   &[type="tel"],
   &[type="color"] {
-    border-radius: 0;
-
     &:focus {
       @include default-focus;
     }
