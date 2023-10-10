@@ -186,3 +186,13 @@ input {
     }
   }
 }
+
+#simple-container {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Proxima Nova', 'Open Sans';
+  }
+
+  .btn-primary:hover {
+    background: #1955bd;
+  }
+}
