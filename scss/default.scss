@@ -44,14 +44,8 @@
     }
   }
 
-  .search-menu .search-input {
-    border-color: var(--tertiary-hover);
-    outline: 1px solid var(--tertiary-hover);
-  }
-
   .results {
     top: 43px;
-    border-radius: 0.25em;
 
     .topic-title {
       text-decoration: underline;
