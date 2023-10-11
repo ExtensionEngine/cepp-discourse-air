@@ -10,7 +10,10 @@
     font-size: 2rem;
     font-family: Lora;
     font-weight: 500;
-    color: var(--secondary);
+
+    a {
+      color: unset;
+    }
   }
 
   p {
