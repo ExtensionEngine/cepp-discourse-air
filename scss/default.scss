@@ -10,6 +10,10 @@
     font-size: 2rem;
     font-family: Lora;
     font-weight: 500;
+
+    a {
+      color: unset;
+    }
   }
 
   p {
@@ -199,7 +203,6 @@ div.ac-wrap {
 .d-header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   height: 75px;
-  text-transform: uppercase;
   background: $cepp-white;
 
   .wrap {
@@ -237,6 +240,7 @@ div.ac-wrap {
             font-size: 13px;
             transition: all 0.3s;
             white-space: nowrap;
+            text-transform: uppercase;
 
             &:hover {
               color: $cepp-green;
@@ -337,13 +341,7 @@ div.ac-wrap {
 
 html {
   body {
-    background: linear-gradient(
-      0deg,
-      rgba(var(--primary-rgb), 0.075) 0%,
-      rgba(var(--primary-rgb), 0.075) 100%
-    ),
-    linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
-
+    background: $cepp-grey-lightest;
     font-family: 'Proxima Nova', 'Open Sans';
   }
 
@@ -380,11 +378,6 @@ html body #main-outlet {
   @media screen and (max-width: 1075px) {
     width: 85%;
   }
-}
-
-.nav-pills:not(.user-nav) > li a.active,
-.nav-pills:not(.user-nav) > li > a {
-  border-radius: 0.5em;
 }
 
 // Topic List

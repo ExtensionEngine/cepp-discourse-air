@@ -54,7 +54,7 @@
     }
   }
 
-  & > div, .search-header > div, .search-advanced-filters {
+  .search-header, .search-bar, .search-filters, .search-advanced-filters {
     background: #E8E8E8 !important;
   }
 
@@ -78,8 +78,6 @@
 }
 
 .d-editor-textarea-wrapper {
-  border-radius: 0;
-
   &.in-focus {
     @include default-focus;
   }
@@ -101,8 +99,6 @@
     }
 
     .select-kit-header {
-      border-radius: 0;
-
       &:focus {
         @include default-focus;
       }
@@ -125,8 +121,6 @@ input {
   &[type="search"],
   &[type="tel"],
   &[type="color"] {
-    border-radius: 0;
-
     &:focus {
       @include default-focus;
     }
@@ -196,4 +190,22 @@ input {
   .btn-primary:hover {
     background: #1955bd;
   }
+}
+
+#reply-control, #bookmark-reminder-modal {
+  input, .select-kit-header, .d-editor-textarea-wrapper {
+    border-radius: 0;
+  }
+}
+
+#quick-access-profile li span {
+  text-transform: uppercase;
+}
+
+#quick-access-replies a {
+  color: $cepp-orange;
+}
+
+.tippy-box {
+  border: none;
 }
