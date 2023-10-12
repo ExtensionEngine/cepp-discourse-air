@@ -209,3 +209,7 @@ input {
 .tippy-box {
   border: none;
 }
+
+.sidebar-section-link-wrapper[data-list-item-name="all-categories"] {
+  display: none;
+}
