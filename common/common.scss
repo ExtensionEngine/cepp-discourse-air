@@ -29,6 +29,7 @@
 
 .sidebar-wrapper {
   border-radius: 0 !important;
+  height: fit-content !important;
 }
 
 .search-container {
@@ -156,7 +157,7 @@ input {
     }
 
     &-content-text {
-      padding: 5px 20px;
+      padding: 5px 27px;
       color: $cepp-orange;
       font-weight: 600;
       line-height: 18px;
@@ -212,4 +213,30 @@ input {
 
 .sidebar-section-link-wrapper[data-list-item-name="all-categories"] {
   display: none;
+}
+
+.nav-item_new, .nav-item_unread {
+  display: none !important;
+}
+
+.topic-list {
+  th.posters span {
+    display: none;
+  }
+
+  td.author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      margin: 0 15px;
+    }
+  }
+
+  .main-link {
+    a[href^="/u/"] {
+      color: $cepp-orange;
+    }
+  }
 }
