@@ -305,6 +305,10 @@ input {
       color: $cepp-orange;
     }
   }
+
+  button[aria-label="This post has 0 replies"] span {
+    visibility: hidden;
+  }
 }
 
 [data-section-name=quick-links] {
