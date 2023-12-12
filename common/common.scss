@@ -251,3 +251,9 @@ input {
 li[data-list-item-name="View All Categories"] {
   display: none;
 }
+
+.welcome-message .alert {
+  background-color: unset;
+  padding: unset;
+  font-size: 20px;
+}
