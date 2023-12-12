@@ -158,7 +158,7 @@ input {
     }
 
     &-content-text {
-      padding: 5px 27px;
+      padding: 0 8px;
       color: $cepp-orange;
       font-weight: 600;
       line-height: 18px;
@@ -240,4 +240,14 @@ input {
       color: $cepp-orange;
     }
   }
+}
+
+[data-section-name=quick-links] {
+  .sidebar-section-header-wrapper {
+    display: none;
+  }
+}
+
+li[data-list-item-name="View All Categories"] {
+  display: none;
 }
