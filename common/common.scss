@@ -221,6 +221,19 @@ input {
         content: "Like";
         margin-left: 5px;
       }
+
+      &.d-hover {
+        background: var(--success-low) !important;
+        .d-icon {
+          color: var(--success) !important;
+        }
+      }
+    }
+
+    .has-like {
+      .d-icon {
+        color: var(--success) !important;
+      }
     }
   }
 }
