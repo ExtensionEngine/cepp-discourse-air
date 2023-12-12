@@ -187,6 +187,41 @@ input {
     .share {
       display: none;
     }
+
+    .edit {
+      &:after {
+        content: "Edit";
+        margin-left: 5px;
+      }
+    }
+
+    .bookmark {
+      &:after {
+        content: "Bookmark";
+        margin-left: 5px;
+      }
+    }
+
+    .delete {
+      &:after {
+        content: "Delete";
+        margin-left: 5px;
+      }
+    }
+
+    .show-post-admin-menu {
+      &:after {
+        content: "Admin";
+        margin-left: 5px;
+      }
+    }
+
+    .like {
+      &:after {
+        content: "Like";
+        margin-left: 5px;
+      }
+    }
   }
 }
 
