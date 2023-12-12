@@ -73,6 +73,20 @@
   .topic-link {
     color: $cepp-blue;
   }
+
+  .action-title {
+    font-size: 19px;
+  }
+
+  .d-editor-input, .d-editor-preview {
+    font-size: 17px;
+  }
+
+  .save-or-cancel {
+    .create, .cancel {
+      font-size: 16px;
+    }
+  }
 }
 
 .btn-primary {
