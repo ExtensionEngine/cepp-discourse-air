@@ -183,6 +183,17 @@ input {
     }
   }
 
+  .topic-meta-data {
+    .post-infos {
+      .post-info {
+        .post-date {
+          pointer-events: none;
+          text-decoration: unset;
+        }
+      }
+    }
+  }
+
   .post-menu-area {
     .share {
       display: none;
