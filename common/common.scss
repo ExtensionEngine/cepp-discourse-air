@@ -262,14 +262,14 @@ li[data-list-item-name="View All Categories"] {
   &:before {
     content: "SORT BY";
     padding: 10px 15px 10px 0;
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .latest a {
     font-size: 0;
     &:after {
       content: "Most Recent";
-      font-size: initial;
+      font-size: 17px;
     }
   }
 
@@ -277,7 +277,7 @@ li[data-list-item-name="View All Categories"] {
     font-size: 0;
     &:after {
       content: "Replies";
-      font-size: initial;
+      font-size: 17px;
     }
   }
 }
