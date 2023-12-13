@@ -70,6 +70,22 @@
     background: $cepp-blue;
   }
 
+  .composer-popup {
+    border-radius: 5px;
+    background-color: var(--tertiary);
+    color: var(--secondary);
+
+    .close {
+      font-size: 17px;
+      color: var(--secondary);
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
   .topic-link {
     color: $cepp-blue;
   }
