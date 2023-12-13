@@ -70,8 +70,38 @@
     background: $cepp-blue;
   }
 
+  .composer-popup {
+    border-radius: 5px;
+    background-color: var(--tertiary);
+    color: var(--secondary);
+
+    .close {
+      font-size: 17px;
+      color: var(--secondary);
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
   .topic-link {
     color: $cepp-blue;
+  }
+
+  .action-title {
+    font-size: 19px;
+  }
+
+  .d-editor-input, .d-editor-preview {
+    font-size: 17px;
+  }
+
+  .save-or-cancel {
+    .create, .cancel {
+      font-size: 16px;
+    }
   }
 }
 
@@ -158,7 +188,7 @@ input {
     }
 
     &-content-text {
-      padding: 5px 27px;
+      padding: 0 8px;
       color: $cepp-orange;
       font-weight: 600;
       line-height: 18px;
@@ -180,6 +210,71 @@ input {
   .full-name {
     a {
       text-decoration: none;
+    }
+  }
+
+  .topic-meta-data {
+    .post-infos {
+      .post-info {
+        .post-date {
+          pointer-events: none;
+          text-decoration: unset;
+        }
+      }
+    }
+  }
+
+  .post-menu-area {
+    .share {
+      display: none;
+    }
+
+    .edit {
+      &:after {
+        content: "Edit";
+        margin-left: 5px;
+      }
+    }
+
+    .bookmark {
+      &:after {
+        content: "Bookmark";
+        margin-left: 5px;
+      }
+    }
+
+    .delete {
+      &:after {
+        content: "Delete";
+        margin-left: 5px;
+      }
+    }
+
+    .show-post-admin-menu {
+      &:after {
+        content: "Admin";
+        margin-left: 5px;
+      }
+    }
+
+    .like {
+      &:after {
+        content: "Like";
+        margin-left: 5px;
+      }
+
+      &.d-hover {
+        background: var(--success-low) !important;
+        .d-icon {
+          color: var(--success) !important;
+        }
+      }
+    }
+
+    .has-like {
+      .d-icon {
+        color: var(--success) !important;
+      }
     }
   }
 }
@@ -240,4 +335,52 @@ input {
       color: $cepp-orange;
     }
   }
+
+  button[aria-label="This post has 0 replies"] span {
+    visibility: hidden;
+  }
+}
+
+[data-section-name=quick-links] {
+  .sidebar-section-header-wrapper {
+    display: none;
+  }
+}
+
+li[data-list-item-name="View All Categories"] {
+  display: none;
+}
+
+.welcome-message .alert {
+  background-color: unset;
+  padding: unset;
+  font-size: 20px;
+}
+
+#navigation-bar {
+  &:before {
+    content: "SORT BY";
+    padding: 10px 15px 10px 0;
+    font-size: 17px;
+  }
+
+  .latest a {
+    font-size: 0;
+    &:after {
+      content: "Most Recent";
+      font-size: 17px;
+    }
+  }
+
+  .top a {
+    font-size: 0;
+    &:after {
+      content: "Replies";
+      font-size: 17px;
+    }
+  }
+}
+
+.custom-search-banner.without-search {
+  max-height: 120px;
 }
