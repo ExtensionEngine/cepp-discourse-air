@@ -86,6 +86,7 @@
 
   function insertQuickLinksCategoriesDivider() {
     const categoriesSection = document.querySelector("[data-section-name=categories]");
+    if (!categoriesSection) return;
     categoriesSection.insertAdjacentHTML("beforebegin", "<hr />");
   }
 
@@ -116,4 +117,9 @@
   api.replaceIcon('notification.liked_many', 'far-check-square');
   api.replaceIcon('notification.liked_consolidated', 'far-check-square');
   api.replaceIcon('heart', 'check');
+
+  api.onAppEvent("inserted-custom-html:footer", () => {
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) yearSpan.innerHTML = new Date().getFullYear();
+  });
 </script>

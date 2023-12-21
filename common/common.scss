@@ -250,6 +250,13 @@ input {
       }
     }
 
+    .create-flag {
+      &:after {
+        content: "Flag";
+        margin-left: 5px;
+      }
+    }
+
     .show-post-admin-menu {
       &:after {
         content: "Admin";
@@ -383,4 +390,16 @@ li[data-list-item-name="View All Categories"] {
 
 .custom-search-banner.without-search {
   max-height: 120px;
+}
+
+#list-area {
+  .alert-info {
+    display: none;
+  }
+}
+
+.similar-topics {
+  a, span {
+    color: var(--secondary);
+  }
 }
