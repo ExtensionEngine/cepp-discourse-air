@@ -56,17 +56,33 @@
     const userMenuButtonProfile = element.closest("#user-menu-button-profile");
     if (!userMenuButtonProfile) return;
 
+    let profileUrl;
+    const url = window.location.href;
+    if (url.includes("dev.advancingpretrial.org")) {
+      profileUrl = "https://profile.dev.advancingpretrial.org";
+    } else if (url.includes("test.advancingpretrial.org")) {
+      profileUrl = "https://profile.test.advancingpretrial.org";
+    } else {
+      profileUrl = "https://profile.advancingpretrial.org";
+    }
+
+    const query = {
+      source: "community",
+      redirectTo: url
+    };
+    const params = new URLSearchParams(query);
+
     const logout = document.querySelector("#quick-access-profile .logout");
     const accountSettings = `
       <li class="preferences">
-        <a href="https://profile.advancingpretrial.org?source=community&amp;redirectTo=https%3A%2F%2Fcommunity.advancingpretrial.org%2F">
+        <a href="${profileUrl}?${params.toString()}">
         <svg class="fa d-icon d-icon-user-cog svg-icon svg-string" xmlns="http://www.w3.org/2000/svg"><use href="#user-cog"></use></svg>
         <span class="item-label">
           Account Settings
         </span>
         </a>
       </li>
-      `;
+    `;
 
     logout.insertAdjacentHTML("beforebegin", accountSettings);
   }
