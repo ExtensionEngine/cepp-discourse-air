@@ -361,7 +361,7 @@ li[data-list-item-name="View All Categories"] {
 .welcome-message .alert {
   background-color: unset;
   padding: unset;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #navigation-bar {
@@ -401,5 +401,11 @@ li[data-list-item-name="View All Categories"] {
 .similar-topics {
   a, span {
     color: var(--secondary);
+  }
+}
+
+.share-topic-modal {
+  button.invite {
+    display: none;
   }
 }
