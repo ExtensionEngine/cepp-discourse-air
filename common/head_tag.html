@@ -60,6 +60,8 @@
     const url = window.location.href;
     if (url.includes("dev.advancingpretrial.org")) {
       profileUrl = "https://profile.dev.advancingpretrial.org";
+    } else if (url.includes("test.dev.advancingpretrial.org")) {
+      profileUrl = "https://profile.test.dev.advancingpretrial.org";
     } else if (url.includes("test.advancingpretrial.org")) {
       profileUrl = "https://profile.test.advancingpretrial.org";
     } else {
