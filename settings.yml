@@ -1,0 +1,5 @@
+appr_profile_app_link:
+  type: string
+  default: "https://profile.advancingpretrial.org"
+  description:
+    en: "Enter link to APPR profile application"
