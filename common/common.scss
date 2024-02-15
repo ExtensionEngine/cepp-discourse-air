@@ -102,6 +102,10 @@
     .create, .cancel {
       font-size: 16px;
     }
+
+    .create {
+      @include primary-button;
+    }
   }
 }
 
@@ -408,4 +412,8 @@ li[data-list-item-name="View All Categories"] {
   button.invite {
     display: none;
   }
+}
+
+#new-create-topic {
+  @include primary-button;
 }
