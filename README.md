@@ -42,6 +42,16 @@ The following is a list of items that need to be configured in the Admin section
   - search_banner.headline - `<a href="/">APPR Community</a>`
   - search_banner.subhead - `Connect - Ask Questions - Share Experiences`
 
+### Install and configure Discourse New Topic button theme component
+
+1. Go to Admin -> Customize -> Themes -> Components
+2. Click Install
+3. Select From a git repository
+4. Enter https://github.com/discourse/discourse-new-topic-button-theme-component
+5. Click Install
+6. Include component on current theme
+7. Change _New topic button text_ and _New topic button title_ to `Create New Post`
+
 ## Helpful links
 
 - [How to install a theme or theme component](https://meta.discourse.org/t/how-do-i-install-a-theme-or-theme-component/63682)
