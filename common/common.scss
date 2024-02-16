@@ -417,3 +417,9 @@ li[data-list-item-name="View All Categories"] {
 #new-create-topic {
   @include primary-button;
 }
+
+#topic-footer-buttons {
+  .topic-notifications-button {
+    display: none;
+  }
+}
