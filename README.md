@@ -51,6 +51,7 @@ The following is a list of items that need to be configured in the Admin section
 5. Click Install
 6. Include component on current theme
 7. Change _New topic button text_ and _New topic button title_ to `Create New Post`
+8. Uncheck Hide default button
 
 ## Helpful links
 
