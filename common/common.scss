@@ -415,7 +415,12 @@ li[data-list-item-name="View All Categories"] {
 }
 
 #new-create-topic {
+  display: none;
+}
+
+#new-create-topic-sidebar {
   @include primary-button;
+  margin: 0 20px 20px;
 }
 
 #topic-footer-buttons {
