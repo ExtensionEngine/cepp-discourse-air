@@ -41,6 +41,8 @@ The following is a list of items that need to be configured in the Admin section
   - plugin outlet - `below-site-header`
   - search_banner.headline - `<a href="/">APPR Community</a>`
   - search_banner.subhead - `Connect - Ask Questions - Share Experiences`
+- Themes -> CEPP Air Theme -> Theme Settings
+  - Configure `appr_profile_app_link` and `welcome_message`
 
 ### Install and configure Discourse New Topic button theme component
 

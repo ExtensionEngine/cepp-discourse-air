@@ -3,3 +3,9 @@ appr_profile_app_link:
   default: "https://profile.advancingpretrial.org"
   description:
     en: "Enter link to APPR profile application"
+
+welcome_message:
+  type: string
+  default: "Welcome to our community. We're happy to have you here. If you need help, please search before you post."
+  description:
+    en: "Enter welcome message that will be displayed on the posts page"
