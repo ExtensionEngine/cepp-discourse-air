@@ -42,10 +42,14 @@
   const insertWelcomeMessage = () => {
     const globalNotice = document.querySelector(".global-notice");
     if (!globalNotice) return;
+
+    const welcomeMessage = settings.welcome_message;
+    if (!welcomeMessage) return;
+
     globalNotice.innerHTML = `
       <div class="row welcome-message" style="display: none;">
         <div class="alert alert-info">
-          <span class="text">Welcome to our community. We're happy to have you here. If you need help, please search before you post.</span>
+          <span class="text">welcomeMessage</span>
         </div>
       </div>
     ` + globalNotice.innerHTML;
