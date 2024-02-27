@@ -132,16 +132,13 @@
     copyCreatePostBtnToSidebar();
   };
 
-</script>
-
-<script type="text/discourse-plugin" version="0.8">
-  api.replaceIcon('d-liked', 'check');
-  api.replaceIcon('d-unliked', 'far-check-square');
-  api.replaceIcon('notification.liked', 'far-check-square');
-  api.replaceIcon('notification.liked_2', 'far-check-square');
-  api.replaceIcon('notification.liked_many', 'far-check-square');
-  api.replaceIcon('notification.liked_consolidated', 'far-check-square');
-  api.replaceIcon('heart', 'check');
+  api.replaceIcon('d-liked', 'thumbs-up');
+  api.replaceIcon('d-unliked', 'far-thumbs-up');
+  api.replaceIcon('notification.liked', 'far-thumbs-up');
+  api.replaceIcon('notification.liked_2', 'far-thumbs-up');
+  api.replaceIcon('notification.liked_many', 'far-thumbs-up');
+  api.replaceIcon('notification.liked_consolidated', 'far-thumbs-up');
+  api.replaceIcon('heart', 'thumbs-up');
 
   api.onAppEvent("inserted-custom-html:footer", () => {
     const yearSpan = document.getElementById("year");
