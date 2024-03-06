@@ -269,11 +269,6 @@ input {
     }
 
     .like {
-      &:after {
-        content: "Like";
-        margin-left: 5px;
-      }
-
       &.d-hover {
         background: var(--success-low) !important;
         .d-icon {
