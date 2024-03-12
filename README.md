@@ -55,6 +55,16 @@ The following is a list of items that need to be configured in the Admin section
 7. Change _New topic button text_ and _New topic button title_ to `Create New Post`
 8. Uncheck Hide default button
 
+### Install and configure Discourse Topic List Author component
+
+1. Go to Admin -> Customize -> Themes -> Components
+2. Click Install
+3. Select From a git repository
+4. Enter https://github.com/ExtensionEngine/cepp-topic-list-author
+5. Click Install
+6. Include component on current theme
+7. Uncheck all checkboxes under Theme Settings
+
 ## Helpful links
 
 - [How to install a theme or theme component](https://meta.discourse.org/t/how-do-i-install-a-theme-or-theme-component/63682)
