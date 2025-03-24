@@ -40,6 +40,10 @@ html body.staff:not(.navigation-topics) #main-outlet {
   margin-bottom: 0px;
 }
 
+html body #main div#main-outlet {
+  background-color: var(--secondary);
+}
+
 .container.posts > .row {
   max-width: calc(100vw - 1.5em);
 }
